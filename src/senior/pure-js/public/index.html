@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MVC Todo</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <h1>Todo List</h1>
+
+  <input type="text" id="todo-input" placeholder="Новая задача" />
+  <button id="add-btn">Добавить</button>
+
+  <ul id="todo-list"></ul>
+
+  <script type="module" src="controller.js"></script>
+
+  <!-- <script>
+    // MODEL
+    class Model {
+      constructor() {
+        this.todos = [];
+      }
+
+      addTodo(text) {
+        const todo = { id: Date.now(), text };
+        this.todos.push(todo);
+        return todo;
+      }
+
+      deleteTodo(id) {
+        this.todos = this.todos.filter(todo => todo.id !== id);
+      }
+
+      getTodos() {
+        return this.todos;
+      }
+    }
+
+    // VIEW
+    class View {
+      constructor() {
+        this.input = document.getElementById('todo-input');
+        this.addBtn = document.getElementById('add-btn');
+        this.list = document.getElementById('todo-list');
+      }
+
+      clearInput() {
+        this.input.value = '';
+      }
+
+      getInputValue() {
+        return this.input.value;
+      }
+
+      bindAdd(handler) {
+        this.addBtn.addEventListener('click', handler);
+      }
+
+      bindDelete(handler) {
+        this.list.addEventListener('click', e => {
+          if (e.target.tagName === 'BUTTON') {
+            const id = parseInt(e.target.dataset.id, 10);
+            handler(id);
+          }
+        });
+      }
+
+      renderTodos(todos) {
+        this.list.innerHTML = '';
+        todos.forEach(todo => {
+          const li = document.createElement('li');
+          li.textContent = todo.text;
+
+          const btn = document.createElement('button');
+          btn.textContent = 'Удалить';
+          btn.dataset.id = todo.id;
+
+          li.appendChild(btn);
+          this.list.appendChild(li);
+        });
+      }
+    }
+
+    // CONTROLLER
+    class Controller {
+      constructor(model, view) {
+        this.model = model;
+        this.view = view;
+
+        this.view.bindAdd(this.handleAddTodo);
+        this.view.bindDelete(this.handleDeleteTodo);
+
+        this.updateView();
+      }
+
+      handleAddTodo = () => {
+        const text = this.view.getInputValue();
+        if (text.trim() !== '') {
+          this.model.addTodo(text);
+          this.view.clearInput();
+          this.updateView();
+        }
+      };
+
+      handleDeleteTodo = (id) => {
+        this.model.deleteTodo(id);
+        this.updateView();
+      };
+
+      updateView() {
+        const todos = this.model.getTodos();
+        this.view.renderTodos(todos);
+      }
+    }
+
+    // Инициализация
+    new Controller(new Model(), new View());
+  </script> -->
+</body>
+</html>

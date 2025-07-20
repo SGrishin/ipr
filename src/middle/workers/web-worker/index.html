@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Web Worker Example</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        button { padding: 10px 15px; margin: 5px; }
+        #result { margin-top: 20px; padding: 15px; background: #f0f0f0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Web Worker Demo</h1>
+    
+    <div>
+        <button id="runInMain">Выполнить в основном потоке</button>
+        <button id="runInWorker">Выполнить в Web Worker</button>
+    </div>
+    
+    <div id="status">Готов к работе</div>
+    <div id="result"></div>
+    <div id="uiStatus">UI остается отзывчивым: <span id="counter">0</span></div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
