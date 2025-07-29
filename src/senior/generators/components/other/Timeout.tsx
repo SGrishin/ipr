@@ -20,11 +20,11 @@ function* myGenerator() {
 function run(genFunc) {
   const gen = genFunc();
 
-  function step(nextValue) {
-    const { value, done } = gen.next(nextValue);
+  function step() {
+    const { value, done } = gen.next();
     if (done) return;
     // value — это промис
-    value.then(result => step(result));
+    value.then(res => step());
   }
 
   step();

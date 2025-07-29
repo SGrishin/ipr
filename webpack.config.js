@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   // entry: './src/index.tsx',
-  // entry: './src/senior/generators/index.tsx', // генераторы
+  entry: './src/senior/generators/index.tsx', // генераторы
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
