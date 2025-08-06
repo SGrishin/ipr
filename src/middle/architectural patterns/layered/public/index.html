@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo App (Layered Architecture)</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+    #todo-list { margin: 20px 0; }
+    .todo-item { display: flex; align-items: center; margin: 8px 0; }
+    .todo-item input[type="checkbox"] { margin-right: 10px; }
+    .todo-item button { margin-left: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Todo App</h1>
+  <div>
+    <input type="text" id="todo-input" placeholder="Enter task...">
+    <button id="add-btn">Add</button>
+  </div>
+  <div id="todo-list"></div>
+
+  <!-- Подключаем модули -->
+  <script type="module" src="repository.js"></script>
+  <script type="module" src="service.js"></script>
+  <script type="module" src="presentation.js"></script>
+</body>
+</html>

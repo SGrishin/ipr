@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Bus Chat Example</title>
+  <style>
+    #chat-app {
+      max-width: 500px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+    #messages-container {
+      height: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    .message {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+    }
+    .message small {
+      color: #999;
+      display: block;
+      font-size: 0.8em;
+    }
+    #notification-badge {
+      display: none;
+      background: red;
+      color: white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+    #input-area {
+      display: flex;
+    }
+    #message-input {
+      flex-grow: 1;
+      padding: 8px;
+    }
+    #send-button {
+      padding: 8px 15px;
+    }
+  </style>
+</head>
+<body>
+  <div id="chat-app">
+    <div id="header">
+      <h2>Чат <span id="notification-badge"></span></h2>
+    </div>
+    <div id="messages-container"></div>
+    <div id="input-area">
+      <input type="text" id="message-input" placeholder="Введите сообщение...">
+      <button id="send-button">Отправить</button>
+    </div>
+  </div>
+
+  <script src="event-bus.js"></script>
+  <script src="message-sender.js"></script>
+  <script src="message-display.js"></script>
+  <script src="notification-manager.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
