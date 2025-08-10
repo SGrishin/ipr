@@ -7,7 +7,11 @@
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "lint": "eslint ./src --ext .ts,.tsx",
-    "start-generators": "webpack serve --mode development ./src/senior/generators/index.ts"
+    "start-generators": "webpack serve --mode development ./src/senior/generators/index.ts",
+    "fix:style": "eslint --fix . && prettier --write .",
+    "backup:deps": "tar -czf node_modules_backup.tar.gz node_modules",
+    "watch:vuln": "npm audit --audit-level=moderate --watch",
+    "check:outdated": "npm outdated --long"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +26,7 @@
     "@typescript-eslint/parser": "^8.35.1",
     "babel-loader": "^10.0.0",
     "css-loader": "^7.1.2",
-    "eslint": "^9.30.1",
+    "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
     "html-webpack-plugin": "^5.6.3",
