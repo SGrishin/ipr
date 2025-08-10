@@ -1,0 +1,6 @@
+.todo-item {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    background-color: antiquewhite;
+}
