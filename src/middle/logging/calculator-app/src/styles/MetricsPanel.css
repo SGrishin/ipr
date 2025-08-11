@@ -1,0 +1,26 @@
+.metrics-panel {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  height: 200px;
+  overflow-y: auto;
+}
+
+.metrics-panel h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.metrics-panel ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.metrics-panel li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}

@@ -1,0 +1,14 @@
+.display {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+.display-value {
+  font-size: 2em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
