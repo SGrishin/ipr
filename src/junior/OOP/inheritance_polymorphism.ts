@@ -12,7 +12,7 @@ class Cat extends Animal {
     }
 
     sayByMe() {
-        return `"${super.say()}": said ${this.name}`
+        return `"${super.say()}": ${this.name} said`
     }
 }
 
