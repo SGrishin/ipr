@@ -11,10 +11,15 @@ class Cat extends Animal {
         super()
     }
 
-    say() {
+    sayByMe() {
         return `"${super.say()}": said ${this.name}`
     }
 }
+
+const Garfield = new Cat("Гарфилд")
+
+Garfield.say()
+Garfield.sayByMe()
 
 
 // полиморфизм
